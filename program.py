@@ -20,8 +20,8 @@ def search(key, dictionary):
                 entry.insert(0, close_match)
                 text.focus()
                 search(close_match[0], dictionary)
-            else:
-                text.insert(1.0, "Word not found")
+                return
+        text.insert(1.0, "Word not found")
         return
     i = 0
     message = ""
