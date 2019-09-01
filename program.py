@@ -9,6 +9,8 @@ def search(key, dictionary):
         answers = dictionary[key.lower()]
     elif key.title() in dictionary.keys():
         answers = dictionary[key.title()]
+    elif key.upper() in dictionary.keys():
+        answers = dictionary[key.upper()]
     else:
         close_match = get_close_matches(key, dictionary.keys(), 1, 0.8)
         if close_match:
